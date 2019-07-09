@@ -8,7 +8,8 @@
 
             if (!string.IsNullOrEmpty(value))
             {
-                numericValue = RomanCharacterValue(value[0]);
+                foreach (char c in value)
+                    numericValue += RomanCharacterValue(c);
             }
 
             return numericValue;
