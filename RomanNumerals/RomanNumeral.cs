@@ -4,7 +4,7 @@
     {
         public static int NumeralToInteger(string numeral)
         {
-            return 0;
+            return numeral == "I" ? 1 : 0;
         }
     }
 }
