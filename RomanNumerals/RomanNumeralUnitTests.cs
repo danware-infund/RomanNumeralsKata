@@ -84,5 +84,15 @@ namespace RomanNumerals
             RomanNumeral.NumeralToInteger("MMVI")
               .Should().Be(2006);
         }
+
+        [Fact]
+        public void GivenAscendingNumerals_ShouldReturnSubtractedTotal()
+        {
+            RomanNumeral.NumeralToInteger("IV")
+              .Should().Be(4);
+
+            RomanNumeral.NumeralToInteger("CM")
+              .Should().Be(900);
+        }
     }
 }
