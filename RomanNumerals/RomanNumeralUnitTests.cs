@@ -18,5 +18,12 @@ namespace RomanNumerals
             var output = RomanNumeral.NumeralToInteger(string.Empty);
             output.Should().Be(0);
         }
+
+        [Fact]
+        public void GivenI_ShouldReturn1()
+        {
+            var output = RomanNumeral.NumeralToInteger("I");
+            output.Should().Be(1);
+        }
     }
 }
