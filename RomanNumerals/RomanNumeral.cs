@@ -18,21 +18,9 @@
         private static int NumeralModifier(string sourceNumeral, int currentIndex)
         {
             var currentVal = RomanCharacterValue(sourceNumeral[currentIndex]);
-            var nextVal = 0;
+            var nextVal = (currentIndex < sourceNumeral.Length - 1) ? RomanCharacterValue(sourceNumeral[currentIndex + 1]) : 0;
 
-            if (currentIndex < sourceNumeral.Length - 1)
-            {
-                nextVal = RomanCharacterValue(sourceNumeral[currentIndex + 1]);
-            }
-
-            if (nextVal > currentVal)
-            {
-                return -currentVal;
-            }
-            else
-            {
-                return currentVal;
-            }
+            return currentVal < nextVal ? -currentVal : currentVal;
         }
 
         private static int RomanCharacterValue(char value)
