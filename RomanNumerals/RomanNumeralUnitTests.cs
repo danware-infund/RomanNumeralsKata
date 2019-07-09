@@ -77,5 +77,12 @@ namespace RomanNumerals
             RomanNumeral.NumeralToInteger("XX")
               .Should().Be(20);
         }
+
+        [Fact]
+        public void GivenDescendingNumerals_ShouldReturnAddedTotal()
+        {
+            RomanNumeral.NumeralToInteger("MMVI")
+              .Should().Be(2006);
+        }
     }
 }
