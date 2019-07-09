@@ -25,5 +25,12 @@ namespace RomanNumerals
             var output = RomanNumeral.NumeralToInteger("I");
             output.Should().Be(1);
         }
+
+        [Fact]
+        public void GivenV_ShouldReturn5()
+        {
+            var output = RomanNumeral.NumeralToInteger("V");
+            output.Should().Be(5);
+        }
     }
 }
