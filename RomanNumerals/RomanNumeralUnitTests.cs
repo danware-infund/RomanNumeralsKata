@@ -94,5 +94,19 @@ namespace RomanNumerals
             RomanNumeral.NumeralToInteger("CM")
               .Should().Be(900);
         }
+
+        [Fact]
+        public void GivenOnlyAddition_ShouldReturnCorrectTotal()
+        {
+            RomanNumeral.NumeralToInteger("MMVI")
+              .Should().Be(2006);
+        }
+
+        [Fact]
+        public void GivenAscendingAndDescendingNumerals_ShouldReturnCorrectTotal()
+        {
+            RomanNumeral.NumeralToInteger("MCMXLIV")
+              .Should().Be(1944);
+        }
     }
 }
