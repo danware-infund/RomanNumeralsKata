@@ -4,7 +4,12 @@
     {
         public static int NumeralToInteger(string numeral)
         {
-            return numeral == "I" ? 1 : 0;
+            switch (numeral)
+            {
+                case "I": return 1;
+                case "V": return 5;
+                default: return 0;
+            }
         }
     }
 }
