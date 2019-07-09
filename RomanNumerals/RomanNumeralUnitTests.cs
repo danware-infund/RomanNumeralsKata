@@ -67,5 +67,15 @@ namespace RomanNumerals
             RomanNumeral.NumeralToInteger("M")
               .Should().Be(1000);
         }
+
+        [Fact]
+        public void GivenRepeatedNumerals_ShouldReturnAddedTotal()
+        {
+            RomanNumeral.NumeralToInteger("III")
+              .Should().Be(3);
+
+            RomanNumeral.NumeralToInteger("XX")
+              .Should().Be(20);
+        }
     }
 }
